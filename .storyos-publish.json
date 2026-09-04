@@ -1,0 +1,38 @@
+{
+  "schema": 4,
+  "storyId": "352ff637-b7f7-4b06-aa26-fa238cc8b15e",
+  "projectId": "352ff637-b7f7-4b06-aa26-fa238cc8b15e",
+  "title": "测试",
+  "description": "从一个新的互动故事开始。",
+  "duration": "00:00",
+  "nodeCount": 3,
+  "assetCount": 1,
+  "format": "static-site",
+  "formatVersion": 1,
+  "publisher": "StoryOS",
+  "listed": true,
+  "remixable": true,
+  "license": "CC-BY-SA-4.0",
+  "source": {
+    "type": "github-release-asset",
+    "releaseTag": "storyos-source",
+    "assetName": "project-23b466d1d9f2.storyos",
+    "packageVersion": 2,
+    "size": 2755705,
+    "sha256": "23b466d1d9f277e0916a065b4447a608848a3387c52ec2862ea92cb614477cdf"
+  },
+  "storyosVersion": "0.1.0",
+  "exportedAt": "2026-09-04T13:02:42.233Z",
+  "project": {
+    "id": "352ff637-b7f7-4b06-aa26-fa238cc8b15e",
+    "title": "测试",
+    "description": "从一个新的互动故事开始。",
+    "status": "编辑中",
+    "updatedAt": "2026/9/2 18:32:42",
+    "duration": "00:00",
+    "language": "简体中文",
+    "nodeCount": 3,
+    "assetCount": 1
+  },
+  "publishedAt": "2026-09-04T13:03:06.450Z"
+}
