@@ -1,0 +1,1202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="从一个新的互动故事开始。" />
+  <meta name="application-name" content="StoryOS" />
+  <meta name="generator" content="StoryOS" />
+  <meta name="storyos:version" content="0.1.0" />
+  <meta name="storyos:format" content="static-site" />
+  <meta name="storyos:format-version" content="1" />
+  <meta name="storyos:project-id" content="352ff637-b7f7-4b06-aa26-fa238cc8b15e" />
+  <meta name="storyos:project-updated-at" content="2026/9/2 18:32:42" />
+  <meta name="storyos:exported-at" content="2026-09-04T13:02:42.233Z" />
+  <meta name="theme-color" content="#07090e" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="StoryOS" />
+  <meta property="og:title" content="测试 · StoryOS" />
+  <meta property="og:description" content="从一个新的互动故事开始。" />
+  <meta property="og:image" content="assets/story-cover-13dqnnr.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://ccran.github.io/storyos-story-1y8i6y7/" />
+  <meta property="og:url" content="https://ccran.github.io/storyos-story-1y8i6y7/" />
+  <title>测试 · StoryOS</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"测试","description":"从一个新的互动故事开始。","genre":["互动故事","Interactive fiction"],"creator":{"@type":"SoftwareApplication","name":"StoryOS","softwareVersion":"0.1.0","applicationCategory":"MultimediaApplication"},"identifier":"352ff637-b7f7-4b06-aa26-fa238cc8b15e","dateModified":"2026/9/2 18:32:42","inLanguage":"简体中文"}</script>
+  <script id="storyos-export-metadata" type="application/json">{"schemaVersion":1,"format":"static-site","formatVersion":1,"exportedAt":"2026-09-04T13:02:42.233Z","generator":{"name":"StoryOS","version":"0.1.0"},"project":{"id":"352ff637-b7f7-4b06-aa26-fa238cc8b15e","title":"测试","description":"从一个新的互动故事开始。","status":"编辑中","updatedAt":"2026/9/2 18:32:42","duration":"00:00","language":"简体中文","nodeCount":3,"assetCount":1}}</script>
+  <style>
+
+    :root { color-scheme: dark; font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html, body { min-width: 320px; min-height: 100%; margin: 0; background: #07090e; }
+body { min-height: 100vh; color: #f7f8fb; }
+button { font: inherit; }
+button:focus-visible { outline: 2px solid #9bb2ff; outline-offset: 3px; }
+.app { position: relative; min-height: 100vh; overflow: hidden; background: #07090e; }
+.view { display: none; min-height: 100vh; }
+.view.active { display: flex; }
+
+.home { position: relative; align-items: center; justify-content: center; padding: 40px 24px; isolation: isolate; }
+.home-cover { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.home-shade { position: absolute; z-index: -2; inset: 0; background: linear-gradient(90deg, #05070cea 0%, #070a10bd 48%, #05070c94 100%), linear-gradient(0deg, #05070df0 0%, transparent 46%); }
+.home-glow { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 68% 32%, #6687ea38, transparent 32%); }
+.home-content { width: min(1080px, 100%); }
+.brand-kicker { display: flex; align-items: center; gap: 12px; color: #aab9ec; font-size: 11px; font-weight: 750; letter-spacing: .22em; text-transform: uppercase; }
+.brand-kicker::before { width: 32px; height: 1px; content: ""; background: #8da7ff; }
+.storyos { margin: 12px 0 0; font-size: clamp(62px, 12vw, 148px); font-weight: 850; letter-spacing: -.08em; line-height: .88; text-shadow: 0 18px 70px #000; }
+.storyos em { color: #8ea8ff; font-style: normal; }
+.project-name { max-width: 680px; margin: 24px 0 0; color: #dce1ec; font-size: clamp(18px, 2.6vw, 30px); font-weight: 620; }
+.project-description { max-width: 600px; margin: 10px 0 0; color: #9aa3b2; font-size: 13px; line-height: 1.7; }
+.project-meta { display: flex; max-width: 680px; margin-top: 16px; flex-wrap: wrap; gap: 7px; }
+.project-meta span { padding: 5px 8px; border: 1px solid #ffffff18; border-radius: 999px; color: #9ea9bc; font-size: 9px; background: #0c111bb0; backdrop-filter: blur(10px); }
+.home-menu { display: flex; width: min(390px, 100%); margin-top: 44px; flex-direction: column; gap: 10px; }
+.menu-item { display: grid; min-height: 58px; padding: 0 18px; grid-template-columns: 34px minmax(0, 1fr) 20px; align-items: center; gap: 12px; border: 1px solid #ffffff20; border-radius: 10px; color: #edf0f7; text-align: left; background: #111722b8; cursor: pointer; backdrop-filter: blur(14px); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.menu-item:hover:not(:disabled) { transform: translateX(5px); border-color: #8ba5ff82; background: #1b2742dc; }
+.menu-item:disabled { color: #717986; cursor: not-allowed; }
+.menu-icon { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 8px; color: #a9b9f0; background: #748de32b; }
+.menu-label { display: flex; flex-direction: column; gap: 3px; }
+.menu-label strong { font-size: 13px; }
+.menu-label small { color: #7f8999; font-size: 9px; }
+.menu-arrow { color: #8290a8; font-size: 18px; text-align: right; }
+.home-foot { position: absolute; right: 28px; bottom: 22px; color: #6f7784; font-size: 9px; letter-spacing: .08em; }
+
+.game { position: relative; flex-direction: column; background: #05070a; }
+.game-topbar { position: absolute; z-index: 8; top: 0; right: 0; left: 0; display: flex; height: 72px; padding: 0 clamp(18px, 4vw, 48px); align-items: center; justify-content: space-between; background: linear-gradient(#05070dcc, transparent); }
+.mini-brand { color: #aab8e9; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.top-actions { display: flex; gap: 8px; }
+.icon-button { min-height: 36px; padding: 0 13px; border: 1px solid #ffffff20; border-radius: 8px; color: #d9deea; font-size: 10px; background: #090d15a6; cursor: pointer; backdrop-filter: blur(10px); }
+.icon-button:hover { border-color: #8ca7ff6b; background: #17213a; }
+.stage { position: relative; width: 100%; min-height: 100vh; flex: 1; overflow: hidden; background: #05070a; }
+.stage-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.stage-vignette { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, #05080df5 0, transparent 50%), radial-gradient(circle, transparent 28%, #05080db5 118%); }
+.node-status { position: absolute; z-index: 3; top: 82px; left: clamp(18px, 4vw, 48px); display: flex; align-items: center; gap: 10px; padding: 8px 11px; border: 1px solid #ffffff14; border-radius: 8px; background: #0a0e15a6; backdrop-filter: blur(10px); }
+.node-status > b { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 6px; color: #9db4fb; font-size: 13px; background: #4464b952; }
+.node-status > span { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+.node-status small { color: #929aa8; font-size: 7px; letter-spacing: .08em; }
+.node-status strong { max-width: min(50vw, 420px); overflow: hidden; font-size: 10px; white-space: nowrap; text-overflow: ellipsis; }
+.node-status i { margin-left: 8px; color: #9299a5; font-size: 8px; font-style: normal; }
+.story-copy { position: absolute; z-index: 3; right: 8%; bottom: 13%; left: 8%; padding: 20px 25px; border-left: 3px solid #7695ef; background: linear-gradient(90deg, #0a0e16e6, #0a0e1680 65%, transparent); text-shadow: 0 2px 8px #000; }
+.story-copy .speaker { display: block; color: inherit; font-weight: 700; }
+.story-copy p { max-width: 780px; margin: 7px 0 0; color: inherit; line-height: 1.65; }
+.ai-disclosure { position: absolute; z-index: 5; right: clamp(18px, 4vw, 48px); bottom: 92px; padding: 6px 9px; border: 1px solid #ffffff1c; border-radius: 999px; color: #cbd3e5; font-size: 9px; background: #070b12cc; backdrop-filter: blur(10px); }
+.center-panel { position: absolute; z-index: 4; top: 50%; left: 50%; width: min(720px, 86%); padding: 30px; transform: translate(-50%, -50%); border: 1px solid #ffffff1c; border-radius: 14px; text-align: center; background: #0b1019dc; box-shadow: 0 24px 70px #000a; backdrop-filter: blur(18px); }
+.center-panel > small { color: #d8a759; font-size: 9px; font-weight: 750; letter-spacing: .16em; }
+.center-panel h2 { margin: 9px 0 22px; font-size: clamp(20px, 3vw, 29px); }
+.center-panel > p { margin: 15px 0 0; color: #8d95a3; font-size: 9px; }
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.choices button { display: grid; min-width: 0; grid-template-columns: 34px minmax(0, 1fr) 18px; align-items: center; gap: 10px; padding: 13px; border: 1px solid #ffffff1c; border-radius: 8px; color: #e7e9ee; text-align: left; background: #ffffff0d; cursor: pointer; transition: .18s ease; }
+.choices button:hover { transform: translateY(-2px); border-color: #d7a350; background: #7b58254a; box-shadow: 0 8px 24px #0005; }
+.choices button:disabled { opacity: .42; cursor: not-allowed; filter: grayscale(.7); }
+.choice-timer { display: grid; margin: -7px 0 15px; grid-template-columns: 44px minmax(100px, 1fr); align-items: center; gap: 8px; color: #afbeed; font-size: 10px; }
+.choice-timer > i { height: 3px; overflow: hidden; border-radius: 999px; background: #ffffff1a; }
+.choice-timer > i b { display: block; height: 100%; border-radius: inherit; background: #7695ef; transition: width .1s linear; }
+.choices b { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 6px; color: #f1c374; background: #6c4b1e; }
+.choices span { overflow: hidden; font-size: 12px; white-space: nowrap; text-overflow: ellipsis; }
+.ending-mark { display: grid; width: 48px; height: 48px; margin: 0 auto 13px; place-items: center; border-radius: 50%; color: #b9ddb8; font-size: 22px; background: #43674370; }
+.primary-action { min-height: 42px; margin-top: 20px; padding: 0 20px; border: 1px solid #7994ef80; border-radius: 8px; color: #fff; background: #4969ce; cursor: pointer; }
+.primary-action:hover { background: #5b7ae0; }
+.controls { position: absolute; z-index: 6; right: clamp(16px, 3vw, 38px); bottom: 18px; left: clamp(16px, 3vw, 38px); display: flex; min-height: 64px; padding: 8px 12px; align-items: center; gap: 13px; border: 1px solid #ffffff17; border-radius: 14px; color: #d8dce5; font-size: 12px; background: #080b12d9; box-shadow: 0 16px 46px #0009; opacity: 0; pointer-events: none; transform: translateY(18px); backdrop-filter: blur(16px); transition: opacity .2s ease, transform .2s ease; }
+.controls.is-visible, .controls:focus-within { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.control-button { display: grid; width: 48px; height: 48px; padding: 0; flex: 0 0 48px; place-items: center; border: 0; border-radius: 10px; color: #fff; font-size: 19px; background: transparent; cursor: pointer; }
+.control-button:hover { background: #ffffff18; }
+.time-label { min-width: 94px; color: #d2d7e1; font-size: 12px; font-variant-numeric: tabular-nums; text-align: center; }
+.progress { position: relative; height: 10px; min-width: 90px; padding: 0; flex: 1; overflow: hidden; border: 0; border-radius: 7px; background: #ffffff33; cursor: pointer; }
+.progress span { position: absolute; inset: 0 auto 0 0; display: block; border-radius: inherit; background: #6688ed; }
+
+.tree { position: relative; height: 100vh; min-height: 560px; padding: 34px clamp(18px, 5vw, 72px) 42px; flex-direction: column; overflow: hidden; background: radial-gradient(circle at 50% 0, #1c2c5766, transparent 38%), #080b11; }
+.tree-header { display: flex; width: min(1180px, 100%); margin: 0 auto; align-items: center; justify-content: space-between; gap: 20px; }
+.tree-title small { color: #8299e4; font-size: 9px; font-weight: 750; letter-spacing: .16em; }
+.tree-title h1 { margin: 5px 0 0; font-size: clamp(25px, 4vw, 40px); }
+.tree-summary { width: min(1180px, 100%); margin: 18px auto 0; color: #8d96a7; font-size: 11px; }
+.tree-grid { position: relative; width: min(1180px, 100%); min-height: 0; margin: 16px auto 0; flex: 1; overflow: hidden; border: 1px solid #ffffff12; border-radius: 14px; background-color: #0b0f17; background-image: radial-gradient(#64708a45 1px, transparent 1px); background-size: 22px 22px; cursor: grab; touch-action: none; user-select: none; }
+.tree-grid.is-panning { cursor: grabbing; }
+.tree-stage { position: absolute; inset: 0; overflow: hidden; }
+.tree-canvas { position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; transform-origin: 0 0; transition: transform .24s ease; will-change: transform; }
+.tree-grid.is-panning .tree-canvas { transition: none; }
+.tree-controls { position: absolute; z-index: 4; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 4px; padding: 5px; border: 1px solid #ffffff1c; border-radius: 10px; background: #080c14e8; box-shadow: 0 10px 30px #0008; backdrop-filter: blur(12px); }
+.tree-controls button { display: grid; width: 34px; height: 34px; padding: 0; place-items: center; border: 0; border-radius: 7px; color: #d8deeb; font-size: 16px; background: transparent; cursor: pointer; }
+.tree-controls button:hover { background: #ffffff13; }
+.tree-controls span { min-width: 48px; color: #aeb8c9; font-size: 10px; font-variant-numeric: tabular-nums; text-align: center; }
+.tree-lines { position: absolute; z-index: 0; inset: 0; overflow: visible; pointer-events: none; }
+.tree-lines > path { fill: none; stroke: #3d4658; stroke-width: 2; opacity: .55; }
+.tree-lines > path.is-known { stroke: #7182a6; opacity: .9; }
+.tree-lines > path.in-run { stroke: #6ca28b; stroke-width: 2.6; opacity: 1; filter: drop-shadow(0 0 4px #4b806c80); }
+.plot-card { position: absolute; z-index: 1; width: 224px; height: 138px; padding: 0; overflow: hidden; border: 1px solid #ffffff1d; border-radius: 10px; color: #eef1f8; text-align: left; background: #111722; box-shadow: 0 10px 28px #0006; }
+.plot-card.unlocked { border-color: #6887df82; cursor: pointer; transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
+.plot-card.unlocked:hover { transform: translateY(-3px); border-color: #8fa9f6; box-shadow: 0 15px 34px #0009; }
+.plot-card.in-run { border-color: #547e6d; box-shadow: 0 10px 28px #0008, inset 0 0 0 1px #6ca28b33; }
+.plot-card.is-current { border-color: #91a9f5; box-shadow: 0 0 0 3px #7895f33d, 0 18px 42px #000b; }
+.plot-card.is-focused { border-color: #a8baff; box-shadow: 0 0 0 3px #7895f33d, 0 18px 42px #000b; }
+.plot-card.start-node, .plot-card.end-node { height: 76px; border-radius: 38px; }
+.plot-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .58; }
+.plot-shade { position: absolute; inset: 0; background: linear-gradient(to top, #080b11f7, #080b1138 78%); }
+.plot-index { position: absolute; z-index: 2; top: 10px; left: 10px; display: grid; width: 28px; height: 28px; place-items: center; border-radius: 7px; color: #b4c1eb; font-size: 9px; background: #0a0e17d1; }
+.plot-copy { position: absolute; z-index: 2; right: 14px; bottom: 12px; left: 14px; }
+.plot-copy small { color: #93a7e9; font-size: 8px; letter-spacing: .08em; }
+.plot-copy strong { display: block; margin-top: 5px; font-size: 12px; }
+.rewind-mark { position: absolute; z-index: 3; top: 10px; right: 10px; display: grid; width: 26px; height: 26px; place-items: center; border: 1px solid #91a9f566; border-radius: 50%; color: #c7d2f6; font-size: 13px; background: #0a0e17d9; }
+.plot-card.locked { display: grid; place-items: center; border-style: dashed; background: linear-gradient(135deg, #131925, #0c1018); }
+.question { display: flex; align-items: center; flex-direction: column; gap: 8px; color: #667083; }
+.question b { display: grid; width: 52px; height: 52px; place-items: center; border: 1px solid #ffffff12; border-radius: 50%; color: #768196; font-size: 25px; background: #ffffff05; }
+.question span { font-size: 9px; letter-spacing: .1em; }
+.empty-tree { padding: 80px 20px; color: #727c8d; text-align: center; }
+
+@media (hover: none) { .controls { opacity: 1; pointer-events: auto; transform: none; } }
+@media (max-width: 680px) {
+  .home { align-items: flex-end; padding-bottom: 70px; }
+  .storyos { font-size: clamp(58px, 20vw, 100px); }
+  .project-description { display: none; }
+  .home-menu { margin-top: 30px; }
+  .node-status i { display: none; }
+  .choices { grid-template-columns: 1fr; }
+  .center-panel { padding: 20px; }
+  .story-copy { right: 4%; left: 4%; }
+  .controls { right: 10px; bottom: 10px; left: 10px; min-height: 58px; padding: 6px 8px; gap: 7px; }
+  .control-button { width: 42px; height: 42px; flex-basis: 42px; }
+  .time-label { display: none; }
+  .top-actions .action-label { display: none; }
+}
+
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="view home active" id="home-view">
+      <img class="home-cover" id="home-cover" alt="" />
+      <div class="home-shade"></div><div class="home-glow"></div>
+      <div class="home-content">
+        <div class="brand-kicker">Interactive story</div>
+        <h1 class="storyos">Story<em>OS</em></h1>
+        <h2 class="project-name" id="project-name"></h2>
+        <p class="project-description" id="project-description"></p>
+        <div class="project-meta" id="project-meta" aria-label="项目信息"></div>
+        <nav class="home-menu" aria-label="主菜单">
+          <button class="menu-item" id="start-button" type="button">
+            <span class="menu-icon">▶</span><span class="menu-label"><strong id="start-label">开始新游戏</strong><small id="start-hint">从故事开头自动播放</small></span><span class="menu-arrow">›</span>
+          </button>
+          <button class="menu-item" id="continue-button" type="button">
+            <span class="menu-icon">↻</span><span class="menu-label"><strong>继续游戏</strong><small id="continue-hint">还没有可用进度</small></span><span class="menu-arrow">›</span>
+          </button>
+          <button class="menu-item" id="tree-button" type="button">
+            <span class="menu-icon">◇</span><span class="menu-label"><strong>命运图谱</strong><small>查看并回溯已经历的命运</small></span><span class="menu-arrow">›</span>
+          </button>
+        </nav>
+      </div>
+      <div class="home-foot">由 StoryOS v0.1.0 导出 · 2026-09-04</div>
+    </section>
+
+    <section class="view game" id="game-view">
+      <header class="game-topbar">
+        <span class="mini-brand">STORYOS</span>
+        <div class="top-actions">
+          <button class="icon-button" id="game-tree-button" type="button">◇ <span class="action-label">命运图谱</span></button>
+          <button class="icon-button" id="home-button" type="button">⌂ <span class="action-label">主菜单</span></button>
+        </div>
+      </header>
+      <div class="stage" id="stage"></div>
+    </section>
+
+    <section class="view tree" id="tree-view">
+      <header class="tree-header">
+        <div class="tree-title"><small>FATE MAP</small><h1>命运图谱</h1></div>
+        <button class="icon-button" id="tree-back-button" type="button">← 返回</button>
+      </header>
+      <p class="tree-summary" id="tree-summary"></p>
+      <div class="tree-grid" id="tree-grid" tabindex="0" role="region" aria-label="命运图谱画布。可拖拽或用方向键移动，滚轮缩放。">
+        <div class="tree-stage" id="tree-stage"></div>
+        <div class="tree-controls" aria-label="命运图谱画布控制">
+          <button id="tree-zoom-out" type="button" aria-label="缩小命运图谱" title="缩小">−</button>
+          <span id="tree-zoom-label">100%</span>
+          <button id="tree-zoom-in" type="button" aria-label="放大命运图谱" title="放大">＋</button>
+          <button id="tree-fit" type="button" aria-label="适应画布" title="适应画布">◎</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+
+    (function () {
+      var data = {"project":{"title":"测试","description":"从一个新的互动故事开始。","cover":"assets/story-cover-13dqnnr.svg","updatedAt":"2026/9/2 18:32:42","nodes":1,"assets":1,"duration":"00:00","status":"编辑中","editorDefaults":{"volume":70,"autoPlay":true},"id":"352ff637-b7f7-4b06-aa26-fa238cc8b15e","graph":{"nodes":[{"id":"story-entry","type":"start","title":"开始节点","x":12,"y":40},{"id":"story-exit","type":"end","title":"结束节点","x":73.6,"y":37.31707317073171},{"id":"media_01","type":"media","title":"新影视节点","subtitle":"在下方时间轴编排图片、视频、音频与文字","x":40.699999999999996,"y":26.34146341463415,"duration":"00:05","timeline":[{"id":"visual-80b04944-2cea-42cb-b3ab-6c65aa32638e","trackId":"visual-main","type":"image","label":"02-登上火车.png","start":0,"duration":1.5,"assetId":"L6sueX76pDc"},{"id":"text-543c9c61-4cbe-4c13-ada4-64e3961fae0b","trackId":"text-main","type":"text","label":"你好","start":0,"duration":3,"content":"你好","textColor":"#f7f8fb","speakerFontSize":12,"contentFontSize":20,"speaker":"小明"}],"volume":70,"autoPlay":true,"assetId":"L6sueX76pDc"}],"edges":[{"id":"edge-media_01-story-exit-1788342305116","source":"media_01","target":"story-exit"},{"id":"edge-story-entry-media_01-1788342955042","source":"story-entry","target":"media_01"}],"variables":[]}},"assets":[{"id":"L6sueX76pDc","name":"02-登上火车.png","type":"image","duration":"00:06","source":"assets/L6sueX76pDc-6doclk.png","mimeType":"image/png","fileSize":2751295,"offline":true,"missing":false}],"nodes":[{"id":"story-entry","type":"start","title":"开始节点","x":12,"y":40},{"id":"story-exit","type":"end","title":"结束节点","x":73.6,"y":37.31707317073171},{"id":"media_01","type":"media","title":"新影视节点","subtitle":"在下方时间轴编排图片、视频、音频与文字","x":40.699999999999996,"y":26.34146341463415,"duration":"00:05","timeline":[{"id":"visual-80b04944-2cea-42cb-b3ab-6c65aa32638e","trackId":"visual-main","type":"image","label":"02-登上火车.png","start":0,"duration":1.5,"assetId":"L6sueX76pDc"},{"id":"text-543c9c61-4cbe-4c13-ada4-64e3961fae0b","trackId":"text-main","type":"text","label":"你好","start":0,"duration":3,"content":"你好","textColor":"#f7f8fb","speakerFontSize":12,"contentFontSize":20,"speaker":"小明"}],"volume":70,"autoPlay":true,"assetId":"L6sueX76pDc"}],"edges":[{"id":"edge-media_01-story-exit-1788342305116","source":"media_01","target":"story-exit"},{"id":"edge-story-entry-media_01-1788342955042","source":"story-entry","target":"media_01"}],"variables":[],"storyEntries":{"352ff637-b7f7-4b06-aa26-fa238cc8b15e":"media_01"},"exportMetadata":{"schemaVersion":1,"format":"static-site","formatVersion":1,"exportedAt":"2026-09-04T13:02:42.233Z","generator":{"name":"StoryOS","version":"0.1.0"},"project":{"id":"352ff637-b7f7-4b06-aa26-fa238cc8b15e","title":"测试","description":"从一个新的互动故事开始。","status":"编辑中","updatedAt":"2026/9/2 18:32:42","duration":"00:00","language":"简体中文","nodeCount":3,"assetCount":1}}};
+      var nodes = data.nodes || [];
+      var assets = (data.assets || []).filter(function (asset) { return !asset.deletedAt; });
+      var edges = data.edges || [];
+      var storyEntries = data.storyEntries || {};
+      var configuredEntryNodeId = data.entryNodeId || '';
+      var variableDefinitions = data.variables || [];
+      var initialVariables = Object.fromEntries(variableDefinitions.map(function (variable) { return [variable.id, Number(variable.initialValue) || 0]; }));
+      var variables = Object.assign({}, initialVariables);
+      var startNode = nodes.find(function (node) { return node.type === 'start'; });
+      var explicitTarget = startNode
+        ? (edges.find(function (edge) { return edge.source === startNode.id; }) || {}).target
+        : '';
+      var incomingNodeIds = new Set(edges.map(function (edge) { return edge.target; }));
+      var fallbackStart = nodes
+        .filter(function (node) {
+          return node.type !== 'start' && node.type !== 'end' && !incomingNodeIds.has(node.id);
+        })
+        .sort(function (first, second) { return (first.x || 0) - (second.x || 0) || (first.y || 0) - (second.y || 0); })[0];
+      var firstNodeId = nodes.some(function (node) { return node.id === configuredEntryNodeId; })
+        ? configuredEntryNodeId
+        : nodes.some(function (node) { return node.id === explicitTarget; })
+          ? explicitTarget
+          : (fallbackStart ? fallbackStart.id : '');
+      var playableNodes = nodes.filter(function (node) { return node.type !== 'start'; });
+      var storageKey = 'storyos-progress-' + String(data.project.id || data.project.title || 'story');
+      var saved = loadSaved();
+      var storyStack = saved && Array.isArray(saved.storyStack) ? saved.storyStack : [];
+      var currentId = '';
+      var history = [];
+      var historyEdgeIds = [];
+      var variableHistory = [];
+      var unlocked = saved && Array.isArray(saved.unlocked) ? saved.unlocked : [];
+      var unlockedEdges = saved && Array.isArray(saved.unlockedEdges) ? saved.unlockedEdges : [];
+      var progressSeconds = 0;
+      var playing = false;
+      var timer = null;
+      var choiceTimer = null;
+      var returnView = 'home';
+      var treeCanvas = null;
+      var treeScale = 1;
+      var treeX = 0;
+      var treeY = 0;
+      var treeSelectedId = '';
+      var treePointer = null;
+      var treePanMoved = false;
+
+      var homeView = document.getElementById('home-view');
+      var gameView = document.getElementById('game-view');
+      var treeView = document.getElementById('tree-view');
+      var stage = document.getElementById('stage');
+      var treeGrid = document.getElementById('tree-grid');
+      var treeStage = document.getElementById('tree-stage');
+
+      document.getElementById('project-name').textContent = data.project.title || '未命名故事';
+      document.getElementById('project-description').textContent = data.project.description || '';
+      [
+        data.project.status ? '状态 · ' + data.project.status : '',
+        data.project.duration ? '时长 · ' + data.project.duration : '',
+        data.exportMetadata.project.nodeCount ? '节点 · ' + data.exportMetadata.project.nodeCount : '',
+        data.exportMetadata.project.assetCount ? '素材 · ' + data.exportMetadata.project.assetCount : ''
+      ].filter(Boolean).forEach(function (label) {
+        var item = document.createElement('span');
+        item.textContent = label;
+        document.getElementById('project-meta').appendChild(item);
+      });
+      if (data.project.cover) document.getElementById('home-cover').src = data.project.cover;
+
+      function loadSaved() {
+        try {
+          var value = localStorage.getItem(storageKey);
+          return value ? JSON.parse(value) : null;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function persist() {
+        if (!currentId) return;
+        saved = {
+          currentId: currentId,
+          history: history,
+          historyEdgeIds: historyEdgeIds,
+          variableHistory: variableHistory,
+          unlocked: unlocked,
+          unlockedEdges: unlockedEdges,
+          progressSeconds: progressSeconds,
+          variables: variables,
+          storyStack: storyStack,
+          updatedAt: Date.now()
+        };
+        try { localStorage.setItem(storageKey, JSON.stringify(saved)); } catch (error) { /* 本地文件模式可能禁用存储。 */ }
+        updateHomeMenu();
+      }
+
+      function updateHomeMenu() {
+        var resumable = saved && nodes.some(function (node) { return node.id === saved.currentId; });
+        var savedNode = resumable ? nodes.find(function (node) { return node.id === saved.currentId; }) : null;
+        document.getElementById('start-label').textContent = '开始新游戏';
+        document.getElementById('start-hint').textContent = '从故事开头自动播放';
+        document.getElementById('continue-button').disabled = !resumable;
+        document.getElementById('continue-hint').textContent = resumable ? '继续「' + (savedNode.title || '当前剧情') + '」' : '还没有可用进度';
+      }
+
+      function setView(name) {
+        homeView.classList.toggle('active', name === 'home');
+        gameView.classList.toggle('active', name === 'game');
+        treeView.classList.toggle('active', name === 'tree');
+        if (name !== 'game') setPlaying(false);
+      }
+
+      function nextFrom(nodeId, handleId) {
+        return edges.find(function (edge) {
+          return edge.source === nodeId && (!handleId || edge.sourceHandle === handleId) && conditionsPass(edge);
+        });
+      }
+
+      function conditionsPass(edge) {
+        return (edge.conditions || []).every(function (condition) {
+          var current = Number(variables[condition.variableId]) || 0;
+          if (condition.operator === 'eq') return current === condition.value;
+          if (condition.operator === 'neq') return current !== condition.value;
+          if (condition.operator === 'gt') return current > condition.value;
+          if (condition.operator === 'gte') return current >= condition.value;
+          if (condition.operator === 'lt') return current < condition.value;
+          if (condition.operator === 'lte') return current <= condition.value;
+          return false;
+        });
+      }
+
+      function applyEffectsTo(sourceVariables, edge) {
+        var nextVariables = Object.assign({}, sourceVariables);
+        (edge.effects || []).forEach(function (effect) {
+          var definition = variableDefinitions.find(function (item) { return item.id === effect.variableId; });
+          var current = Number(nextVariables[effect.variableId]) || 0;
+          var value = effect.operation === 'set' ? effect.value : current + effect.value;
+          value = Math.max(definition && Number.isFinite(definition.min) ? definition.min : -Infinity, value);
+          value = Math.min(definition && Number.isFinite(definition.max) ? definition.max : Infinity, value);
+          nextVariables[effect.variableId] = value;
+        });
+        return nextVariables;
+      }
+
+      function applyEffects(edge) {
+        variables = applyEffectsTo(variables, edge);
+      }
+
+      function rebuildVariableHistory(runHistory, runEdgeIds) {
+        var snapshots = [];
+        var values = Object.assign({}, initialVariables);
+        runHistory.forEach(function (nodeId, index) {
+          if (index > 0) {
+            var edgeId = runEdgeIds[index - 1];
+            var edge = edges.find(function (item) { return item.id === edgeId; }) || edges.find(function (item) {
+              return item.source === runHistory[index - 1] && item.target === nodeId;
+            });
+            if (edge) values = applyEffectsTo(values, edge);
+          }
+          snapshots.push(Object.assign({}, values));
+        });
+        return snapshots;
+      }
+
+      function resolveHistoryEdgeIds(runHistory, savedEdgeIds) {
+        return runHistory.slice(1).map(function (targetId, index) {
+          var savedEdge = edges.find(function (item) { return item.id === savedEdgeIds[index]; });
+          if (savedEdge && savedEdge.source === runHistory[index] && savedEdge.target === targetId) return savedEdge.id;
+          var edge = edges.find(function (item) {
+            return item.source === runHistory[index] && item.target === targetId;
+          });
+          return edge ? edge.id : '';
+        });
+      }
+
+      function element(tag, className, text) {
+        var item = document.createElement(tag);
+        if (className) item.className = className;
+        if (text !== undefined && text !== null) item.textContent = text;
+        return item;
+      }
+
+      function applyTreeTransform() {
+        if (!treeCanvas) return;
+        treeCanvas.style.transform = 'translate3d(' + treeX + 'px, ' + treeY + 'px, 0) scale(' + treeScale + ')';
+        document.getElementById('tree-zoom-label').textContent = Math.round(treeScale * 100) + '%';
+      }
+
+      function setTreeScale(nextScale, anchorX, anchorY) {
+        if (!treeCanvas) return;
+        var scale = Math.max(0.3, Math.min(2.5, nextScale));
+        var worldX = (anchorX - treeX) / treeScale;
+        var worldY = (anchorY - treeY) / treeScale;
+        treeX = anchorX - worldX * scale;
+        treeY = anchorY - worldY * scale;
+        treeScale = scale;
+        applyTreeTransform();
+      }
+
+      function fitTree() {
+        if (!treeCanvas) return;
+        var canvasWidth = Number(treeCanvas.dataset.width) || treeCanvas.offsetWidth;
+        var canvasHeight = Number(treeCanvas.dataset.height) || treeCanvas.offsetHeight;
+        var availableWidth = Math.max(1, treeGrid.clientWidth - 36);
+        var availableHeight = Math.max(1, treeGrid.clientHeight - 36);
+        treeScale = Math.min(1, availableWidth / canvasWidth, availableHeight / canvasHeight);
+        treeX = (treeGrid.clientWidth - canvasWidth * treeScale) / 2;
+        treeY = (treeGrid.clientHeight - canvasHeight * treeScale) / 2;
+        applyTreeTransform();
+      }
+
+      function rewindFromTree(node) {
+        if (node.type === 'start') { startNewGame(); return; }
+        var historyIndex = history.lastIndexOf(node.id);
+        if (historyIndex < 0) return;
+        history = history.slice(0, historyIndex + 1);
+        historyEdgeIds = historyEdgeIds.slice(0, historyIndex);
+        variableHistory = variableHistory.slice(0, historyIndex + 1);
+        variables = Object.assign({}, initialVariables, variableHistory[historyIndex] || {});
+        currentId = node.id;
+        progressSeconds = 0;
+        returnView = 'game';
+        setView('game');
+        show(node.id, false);
+      }
+
+      function focusTreeNode(node, card, position, canRewind) {
+        if (treePanMoved) return;
+        if (treeSelectedId === node.id && canRewind) {
+          rewindFromTree(node);
+          return;
+        }
+        treeSelectedId = node.id;
+        treeStage.querySelectorAll('.plot-card').forEach(function (item) {
+          item.classList.toggle('is-focused', item === card);
+        });
+        treeScale = Math.max(treeScale, 1.35);
+        treeX = treeGrid.clientWidth / 2 - (position.x + 112) * treeScale;
+        treeY = treeGrid.clientHeight / 2 - (position.y + position.height / 2) * treeScale;
+        applyTreeTransform();
+      }
+
+      function durationToSeconds(duration) {
+        if (!duration || duration === '选择') return 15;
+        var parts = duration.split(':').map(Number);
+        if (parts.length !== 2 || !Number.isFinite(parts[0]) || !Number.isFinite(parts[1])) return 15;
+        return Math.max(1, parts[0] * 60 + parts[1]);
+      }
+
+      function formatTime(seconds) {
+        var value = Math.max(0, Math.round(seconds));
+        return String(Math.floor(value / 60)).padStart(2, '0') + ':' + String(value % 60).padStart(2, '0');
+      }
+
+      function clipTrackId(clip) {
+        if (clip.trackId) return clip.trackId;
+        if (clip.type === 'audio') return 'audio-' + (clip.audioRole || 'background');
+        if (clip.type === 'video' || clip.type === 'image') return 'visual-main';
+        return 'text-main';
+      }
+
+      function clipIsMuted(node, clip) {
+        return (node.timelineTracks || []).some(function (track) {
+          return track.id === clipTrackId(clip) && track.muted;
+        });
+      }
+
+      function assetForNodeAt(node, second) {
+        var clips = (node.timeline || []).filter(function (clip) {
+          return (clip.type === 'video' || clip.type === 'image') && !clipIsMuted(node, clip);
+        });
+        var active = clips.find(function (clip) { return second >= clip.start && second <= clip.start + clip.duration; });
+        var assetId = active ? active.assetId : clips.length === 0 ? node.assetId : undefined;
+        return assets.find(function (asset) { return asset.id === assetId; });
+      }
+
+      function assetVisual(asset) {
+        if (!asset) return '';
+        if (asset.type === 'image') return asset.source || asset.thumbnail || '';
+        return asset.source || asset.thumbnail || '';
+      }
+
+      function assetCover(asset) {
+        if (!asset) return '';
+        if (asset.type === 'video') return asset.thumbnail || '';
+        return asset.source || asset.thumbnail || '';
+      }
+
+      function coverForNode(node) {
+        var cover = assetCover(assetForNodeAt(node, 0));
+        if (cover) return cover;
+        var clip = (node.timeline || []).find(function (item) {
+          return (item.type === 'video' || item.type === 'image') && !clipIsMuted(node, item);
+        });
+        var asset = assets.find(function (item) { return item.id === (clip && clip.assetId); });
+        return assetCover(asset) || data.project.cover || '';
+      }
+
+      function markUnlocked(nodeId) {
+        if (unlocked.indexOf(nodeId) === -1) unlocked.push(nodeId);
+      }
+
+      function markUnlockedEdge(edgeId) {
+        if (edgeId && unlockedEdges.indexOf(edgeId) === -1) unlockedEdges.push(edgeId);
+      }
+
+      function startGame(resumeSavedGame) {
+        if (!firstNodeId) {
+          currentId = '';
+          history = [];
+          historyEdgeIds = [];
+          variableHistory = [];
+          renderEmptyStory();
+          setView('game');
+          return;
+        }
+        var resumable = saved && nodes.some(function (node) { return node.id === saved.currentId; });
+        if (resumeSavedGame && resumable) {
+          currentId = saved.currentId;
+          history = Array.isArray(saved.history) ? saved.history.filter(function (id) { return nodes.some(function (node) { return node.id === id; }); }) : [];
+          if (history[history.length - 1] !== currentId) history.push(currentId);
+          historyEdgeIds = resolveHistoryEdgeIds(history, Array.isArray(saved.historyEdgeIds) ? saved.historyEdgeIds : []);
+          historyEdgeIds.forEach(markUnlockedEdge);
+          variableHistory = Array.isArray(saved.variableHistory) && saved.variableHistory.length === history.length
+            ? saved.variableHistory.map(function (snapshot) { return Object.assign({}, initialVariables, snapshot || {}); })
+            : rebuildVariableHistory(history, historyEdgeIds);
+          progressSeconds = Number(saved.progressSeconds) || 0;
+          variables = Object.assign({}, initialVariables, saved.variables || {});
+          if (variableHistory.length) variableHistory[variableHistory.length - 1] = Object.assign({}, variables);
+          storyStack = Array.isArray(saved.storyStack) ? saved.storyStack : [];
+        } else {
+          currentId = firstNodeId;
+          history = [];
+          historyEdgeIds = [];
+          variableHistory = [];
+          progressSeconds = 0;
+          variables = Object.assign({}, initialVariables);
+          storyStack = [];
+        }
+        setView('game');
+        show(currentId, Boolean(resumeSavedGame && resumable));
+      }
+
+      function startNewGame() {
+        startGame(false);
+      }
+
+      function continueGame() {
+        if (!saved || !nodes.some(function (node) { return node.id === saved.currentId; })) return;
+        startGame(true);
+      }
+
+      function show(nodeId, keepProgress, traversedEdge) {
+        var node = nodes.find(function (item) { return item.id === nodeId; });
+        if (!node) return;
+        setPlaying(false);
+        if (choiceTimer) window.clearInterval(choiceTimer);
+        choiceTimer = null;
+        if (node.type === 'story') {
+          var entryId = storyEntries[node.storyId];
+          var recursiveCall = storyStack.some(function (frame) {
+            return frame && frame.storyId === node.storyId;
+          });
+          currentId = node.id;
+          if (history[history.length - 1] !== node.id) {
+            history.push(node.id);
+            if (traversedEdge) {
+              historyEdgeIds.push(traversedEdge.id);
+              markUnlockedEdge(traversedEdge.id);
+            }
+            variableHistory.push(Object.assign({}, variables));
+          }
+          markUnlocked(node.id);
+          if (!entryId || recursiveCall) {
+            renderEmptyStory();
+            persist();
+            return;
+          }
+          storyStack.push({ storyId: node.storyId, flowId: node.id });
+          persist();
+          window.setTimeout(function () { show(entryId, false); }, 0);
+          return;
+        }
+        if (node.type === 'end' && storyStack.length) {
+          returnFromStory();
+          return;
+        }
+        currentId = node.id;
+        if (history[history.length - 1] !== node.id) {
+          history.push(node.id);
+          if (traversedEdge) {
+            historyEdgeIds.push(traversedEdge.id);
+            markUnlockedEdge(traversedEdge.id);
+          }
+          variableHistory.push(Object.assign({}, variables));
+        } else if (variableHistory.length < history.length) {
+          variableHistory.push(Object.assign({}, variables));
+        }
+        markUnlocked(node.id);
+        if (!keepProgress) progressSeconds = 0;
+        renderNode(node);
+        persist();
+        if (node.type === 'media') setPlaying(node.autoPlay !== false);
+      }
+
+      function renderEmptyStory() {
+        stage.innerHTML = '';
+        var panel = element('div', 'center-panel');
+        panel.appendChild(element('small', '', 'EMPTY STORY'));
+        panel.appendChild(element('h2', '', '这里还没有可播放的剧情'));
+        panel.appendChild(element('p', '', '请返回 StoryOS 编辑器添加内容后重新导出。'));
+        stage.appendChild(panel);
+      }
+
+      function renderNode(node) {
+        stage.innerHTML = '';
+        stage.onpointermove = null;
+        stage.onpointerleave = null;
+        var cover = coverForNode(node);
+        if (cover) {
+          var backdrop = element('img', 'stage-media');
+          backdrop.id = 'stage-media';
+          backdrop.src = cover;
+          backdrop.alt = '';
+          stage.appendChild(backdrop);
+        }
+        stage.appendChild(element('div', 'stage-vignette'));
+
+        var status = element('div', 'node-status');
+        status.appendChild(element('b', '', node.type === 'choice' ? '◇' : node.type === 'end' ? '✓' : '▶'));
+        var statusCopy = element('span');
+        statusCopy.appendChild(element('small', '', node.type === 'choice' ? '关键抉择' : node.type === 'end' ? '故事结束' : '故事片段'));
+        statusCopy.appendChild(element('strong', '', node.title || '未命名剧情'));
+        status.appendChild(statusCopy);
+        status.appendChild(element('i', '', '已走过 ' + history.length + ' 段剧情'));
+        stage.appendChild(status);
+
+        if (node.type === 'choice') renderChoice(node);
+        else if (node.type === 'end') renderEnding();
+        else renderMedia(node);
+      }
+
+      function renderChoice(node) {
+        var panel = element('div', 'center-panel');
+        panel.appendChild(element('small', '', '关键抉择'));
+        panel.appendChild(element('h2', '', node.subtitle || node.title));
+        if (node.timeLimitSeconds) {
+          var remaining = Number(node.timeLimitSeconds);
+          var timerRow = element('div', 'choice-timer');
+          var timerLabel = element('span', '', Math.ceil(remaining) + ' 秒');
+          var timerTrack = element('i');
+          var timerFill = element('b');
+          timerTrack.appendChild(timerFill);
+          timerRow.appendChild(timerLabel);
+          timerRow.appendChild(timerTrack);
+          panel.appendChild(timerRow);
+          choiceTimer = window.setInterval(function () {
+            remaining = Math.max(0, remaining - 0.1);
+            timerLabel.textContent = Math.ceil(remaining) + ' 秒';
+            timerFill.style.width = Math.min(100, remaining / node.timeLimitSeconds * 100) + '%';
+            if (remaining <= 0) {
+              window.clearInterval(choiceTimer);
+              choiceTimer = null;
+              var timeoutId = node.timeoutOptionId || ((node.options || []).find(function (option) { return option.silent; }) || {}).id;
+              var timeoutEdge = timeoutId ? nextFrom(node.id, timeoutId) : null;
+              if (timeoutEdge) { applyEffects(timeoutEdge); show(timeoutEdge.target, false, timeoutEdge); }
+              else {
+                choices.querySelectorAll('button').forEach(function (button) { button.disabled = true; });
+                panel.appendChild(element('p', '', '你错过了选择。'));
+              }
+            }
+          }, 100);
+        }
+        var choices = element('div', 'choices');
+        (node.options || []).forEach(function (option, index) {
+          var edge = nextFrom(node.id, option.id);
+          var rawEdge = edges.find(function (item) { return item.source === node.id && item.sourceHandle === option.id; });
+          if (!edge && rawEdge && rawEdge.hideWhenLocked) return;
+          var button = element('button');
+          button.type = 'button';
+          button.disabled = !edge;
+          button.appendChild(element('b', '', option.silent ? '…' : String.fromCharCode(65 + index)));
+          button.appendChild(element('span', '', option.silent ? (option.label || '保持沉默') : option.label));
+          button.appendChild(element('i', '', '›'));
+          button.addEventListener('click', function () {
+            var selectedEdge = nextFrom(node.id, option.id);
+            if (selectedEdge) { applyEffects(selectedEdge); show(selectedEdge.target, false, selectedEdge); }
+
+          });
+          choices.appendChild(button);
+        });
+        panel.appendChild(choices);
+        panel.appendChild(element('p', '', '你的选择会进入对应的故事分支'));
+        stage.appendChild(panel);
+      }
+
+      function renderEnding() {
+        var panel = element('div', 'center-panel');
+        panel.appendChild(element('div', 'ending-mark', '✓'));
+        panel.appendChild(element('small', '', '故事完成'));
+        panel.appendChild(element('h2', '', '你走完了这条故事线'));
+        panel.appendChild(element('p', '', '回到主菜单，可以重启故事或查看已经解锁的剧情。'));
+        var button = element('button', 'primary-action', '返回主菜单');
+        button.type = 'button';
+        button.addEventListener('click', function () { persist(); setView('home'); });
+        panel.appendChild(button);
+        stage.appendChild(panel);
+      }
+
+      function renderMedia(node) {
+        var copy = element('div', 'story-copy');
+        copy.id = 'story-copy';
+        stage.appendChild(copy);
+
+        var controls = element('div', 'controls');
+        var playButton = element('button', 'control-button', '▶');
+        playButton.id = 'play-button';
+        playButton.type = 'button';
+        playButton.setAttribute('aria-label', '播放');
+        playButton.addEventListener('click', function () { setPlaying(!playing); });
+        controls.appendChild(playButton);
+        controls.appendChild(element('span', 'time-label', formatTime(progressSeconds) + ' / ' + (node.duration || formatTime(durationToSeconds(node.duration))))).id = 'time-label';
+        var progress = element('button', 'progress');
+        progress.type = 'button';
+        progress.setAttribute('aria-label', '调整播放进度');
+        progress.appendChild(element('span'));
+        progress.addEventListener('click', function (event) {
+          var rect = progress.getBoundingClientRect();
+          progressSeconds = Math.max(0, Math.min(durationToSeconds(node.duration), ((event.clientX - rect.left) / rect.width) * durationToSeconds(node.duration)));
+          renderMediaFrame(node);
+          persist();
+        });
+        controls.appendChild(progress);
+        if (node.skippable) {
+          var skip = element('button', 'control-button', '≫');
+          skip.type = 'button';
+          skip.setAttribute('aria-label', '快进到下一段剧情');
+          skip.title = '快进到下一段剧情';
+          skip.addEventListener('click', function () { advance(node); });
+          controls.appendChild(skip);
+        }
+        var fullscreen = element('button', 'control-button', '⛶');
+        fullscreen.type = 'button';
+        fullscreen.setAttribute('aria-label', '全屏');
+        fullscreen.addEventListener('click', toggleFullscreen);
+        controls.appendChild(fullscreen);
+        stage.appendChild(controls);
+        stage.onpointermove = function (event) {
+          var bounds = stage.getBoundingClientRect();
+          var revealHeight = Math.min(150, bounds.height * 0.28);
+          controls.classList.toggle('is-visible', event.clientY >= bounds.bottom - revealHeight);
+        };
+        stage.onpointerleave = function () { controls.classList.remove('is-visible'); };
+        renderMediaFrame(node);
+      }
+
+      function renderMediaFrame(node) {
+        var duration = durationToSeconds(node.duration);
+        var asset = assetForNodeAt(node, progressSeconds);
+        var visual = assetVisual(asset);
+        var backdrop = document.getElementById('stage-media');
+        if (visual) {
+          var needsVideo = asset && asset.type === 'video' && asset.source;
+          var expectedTag = needsVideo ? 'VIDEO' : 'IMG';
+          if (!backdrop || backdrop.tagName !== expectedTag) {
+            var replacement = element(needsVideo ? 'video' : 'img', 'stage-media');
+            if (backdrop) backdrop.replaceWith(replacement);
+            else stage.insertBefore(replacement, stage.firstChild);
+            backdrop = replacement;
+            backdrop.id = 'stage-media';
+            if (needsVideo) {
+              backdrop.playsInline = true;
+              backdrop.preload = 'auto';
+            } else backdrop.alt = '';
+          }
+          if (backdrop.getAttribute('src') !== visual) backdrop.src = visual;
+          if (needsVideo) {
+            backdrop.volume = Math.max(0, Math.min(1, (node.volume == null ? 70 : node.volume) / 100));
+            var visualClip = (node.timeline || []).find(function (clip) {
+              return (clip.type === 'video' || clip.type === 'image') && !clipIsMuted(node, clip) && progressSeconds >= clip.start && progressSeconds <= clip.start + clip.duration;
+            });
+            var mediaSecond = Math.max(0, progressSeconds - ((visualClip && visualClip.start) || 0));
+            if (Math.abs((backdrop.currentTime || 0) - mediaSecond) > (playing ? .35 : .04)) {
+              try { backdrop.currentTime = mediaSecond; } catch (error) { /* 元数据加载前暂不跳转。 */ }
+            }
+            if (playing) backdrop.play().catch(function () { /* 等待用户再次点击播放。 */ });
+            else backdrop.pause();
+          }
+          backdrop.style.display = '';
+        } else if (backdrop) {
+          if (backdrop.tagName === 'VIDEO') backdrop.pause();
+          backdrop.style.display = 'none';
+        }
+
+        var activeAudioClips = (node.timeline || []).filter(function (clip) {
+          return clip.type === 'audio' && !clipIsMuted(node, clip) && progressSeconds >= clip.start && progressSeconds < clip.start + clip.duration;
+        });
+        var stageAudioElements = Array.prototype.slice.call(stage.querySelectorAll('audio[data-stage-audio="true"]'));
+        var activeAudioIds = {};
+        var containsAiSpeech = false;
+        activeAudioClips.forEach(function (audioClip) {
+          var audioAsset = assets.find(function (item) { return item.id === audioClip.assetId; });
+          if (!audioAsset || !audioAsset.source) return;
+          activeAudioIds[audioClip.id] = true;
+          if (audioClip.audioRole === 'voice' && audioAsset.aiGenerated && audioAsset.aiGenerated.provider) containsAiSpeech = true;
+          var audio = stageAudioElements.find(function (item) { return item.dataset.clipId === audioClip.id; });
+          if (!audio) {
+            audio = element('audio');
+            audio.dataset.stageAudio = 'true';
+            audio.dataset.clipId = audioClip.id;
+            audio.preload = 'auto';
+            stage.appendChild(audio);
+            stageAudioElements.push(audio);
+          }
+          if (audio.getAttribute('src') !== audioAsset.source) audio.src = audioAsset.source;
+          audio.loop = Boolean(audioClip.loop);
+          var audioSecond = Math.max(0, progressSeconds - audioClip.start);
+          var audioDuration = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration : audioClip.duration;
+          var audioTarget = audioClip.loop && audioDuration > 0 ? audioSecond % audioDuration : Math.min(audioSecond, Math.max(0, audioDuration - .01));
+          if (Math.abs((audio.currentTime || 0) - audioTarget) > (playing ? .35 : .04)) {
+            try { audio.currentTime = audioTarget; } catch (error) { /* 元数据加载前暂不跳转。 */ }
+          }
+          var audioBaseVolume = Math.max(0, Math.min(1, (audioClip.volume == null ? 70 : audioClip.volume) / 100));
+          var audioRemaining = Math.max(0, audioClip.start + audioClip.duration - progressSeconds);
+          var fadeInScale = audioClip.fadeIn ? Math.min(1, audioSecond / audioClip.fadeIn) : 1;
+          var fadeOutScale = audioClip.fadeOut ? Math.min(1, audioRemaining / audioClip.fadeOut) : 1;
+          audio.volume = audioBaseVolume * Math.min(fadeInScale, fadeOutScale);
+          if (playing) audio.play().catch(function () { /* 等待用户再次点击播放。 */ });
+          else audio.pause();
+        });
+        stageAudioElements.forEach(function (audio) {
+          if (activeAudioIds[audio.dataset.clipId]) return;
+          audio.pause();
+          audio.remove();
+        });
+        var disclosure = document.getElementById('ai-speech-disclosure');
+        if (containsAiSpeech && !disclosure) {
+          disclosure = element('div', 'ai-disclosure', '此语音由人工智能生成');
+          disclosure.id = 'ai-speech-disclosure';
+          stage.appendChild(disclosure);
+        } else if (!containsAiSpeech && disclosure) disclosure.remove();
+
+        var textClip = (node.timeline || []).find(function (clip) {
+          return clip.type === 'text' && !clipIsMuted(node, clip) && clip.content && clip.content.trim() && progressSeconds >= clip.start && progressSeconds <= clip.start + clip.duration;
+        });
+        var copy = document.getElementById('story-copy');
+        copy.innerHTML = '';
+        if (textClip) {
+          copy.style.display = '';
+          copy.style.color = textClip.textColor || '#f7f8fb';
+          copy.style.borderLeftColor = textClip.textColor || '#f7f8fb';
+          if (textClip.speaker && textClip.speaker.trim()) {
+            var speaker = element('span', 'speaker', textClip.speaker);
+            speaker.style.fontSize = (textClip.speakerFontSize || 12) + 'px';
+            copy.appendChild(speaker);
+          }
+          var paragraph = element('p', '', textClip.content);
+          paragraph.style.fontSize = (textClip.contentFontSize || 20) + 'px';
+          copy.appendChild(paragraph);
+        } else {
+          copy.style.display = 'none';
+        }
+
+        var ratio = Math.min(100, (progressSeconds / duration) * 100);
+        var progressFill = stage.querySelector('.progress span');
+        if (progressFill) progressFill.style.width = ratio + '%';
+        var timeLabel = document.getElementById('time-label');
+        if (timeLabel) timeLabel.textContent = formatTime(progressSeconds) + ' / ' + formatTime(duration);
+      }
+
+      function setPlaying(next) {
+        playing = Boolean(next);
+        if (timer) window.clearInterval(timer);
+        timer = null;
+        var button = document.getElementById('play-button');
+        if (button) {
+          button.textContent = playing ? 'Ⅱ' : '▶';
+          button.setAttribute('aria-label', playing ? '暂停' : '播放');
+        }
+        var media = document.getElementById('stage-media');
+        if (media && media.tagName === 'VIDEO') {
+          if (playing) media.play().catch(function () { /* 等待用户再次点击播放。 */ });
+          else media.pause();
+        }
+        stage.querySelectorAll('audio[data-stage-audio="true"]').forEach(function (audio) {
+          if (playing) audio.play().catch(function () { /* 等待用户再次点击播放。 */ });
+          else audio.pause();
+        });
+        if (!playing) return;
+        timer = window.setInterval(function () {
+          var node = nodes.find(function (item) { return item.id === currentId; });
+          if (!node || node.type !== 'media') { setPlaying(false); return; }
+          progressSeconds += 0.2;
+          if (progressSeconds >= durationToSeconds(node.duration)) {
+            progressSeconds = durationToSeconds(node.duration);
+            renderMediaFrame(node);
+            persist();
+            setPlaying(false);
+            window.setTimeout(function () { advance(node); }, 220);
+            return;
+          }
+          renderMediaFrame(node);
+          if (Math.round(progressSeconds * 10) % 10 === 0) persist();
+        }, 200);
+      }
+
+      function advance(node) {
+        var edge = nextFrom(node.id);
+        if (edge) { applyEffects(edge); show(edge.target, false, edge); }
+        else if (storyStack.length) { returnFromStory(); }
+        else { setPlaying(false); persist(); }
+      }
+
+      function returnFromStory() {
+        var frame = storyStack.pop();
+        if (!frame) { setPlaying(false); persist(); return; }
+        var edge = nextFrom(frame.flowId);
+        if (edge) { applyEffects(edge); show(edge.target, false, edge); }
+        else { setPlaying(false); persist(); }
+      }
+
+      function toggleFullscreen() {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (gameView.requestFullscreen) gameView.requestFullscreen();
+      }
+
+      function openTree(from) {
+        returnView = from;
+        setView('tree');
+        renderTree();
+      }
+
+      function renderTree() {
+        treeStage.innerHTML = '';
+        treeCanvas = null;
+        treeSelectedId = '';
+        var unlockedCount = playableNodes.filter(function (node) { return unlocked.indexOf(node.id) !== -1; }).length;
+        document.getElementById('tree-summary').textContent = '已解锁 ' + unlockedCount + ' / ' + playableNodes.length + ' 段命运 · 拖动画布或滚轮缩放；再次点击本轮节点，可连同变量状态一起回溯';
+        if (!nodes.length) {
+          treeStage.appendChild(element('div', 'empty-tree', '还没有可展示的剧情'));
+          return;
+        }
+
+        var cardWidth = 224;
+        var normalHeight = 138;
+        var terminalHeight = 76;
+        var columnGap = 104;
+        var rowGap = 46;
+        var nodeIds = new Set(nodes.map(function (node) { return node.id; }));
+        var incoming = {};
+        var outgoing = {};
+        var depths = {};
+        nodes.forEach(function (node) { incoming[node.id] = 0; depths[node.id] = 0; });
+        var runEdgeSet = new Set(historyEdgeIds);
+        edges.forEach(function (edge) {
+          if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) return;
+          incoming[edge.target] += 1;
+          if (!outgoing[edge.source]) outgoing[edge.source] = [];
+          outgoing[edge.source].push(edge.target);
+        });
+
+        var queue = nodes
+          .filter(function (node) { return incoming[node.id] === 0; })
+          .sort(function (a, b) { return Number(b.type === 'start') - Number(a.type === 'start'); })
+          .map(function (node) { return node.id; });
+        var visited = new Set();
+        while (queue.length) {
+          var sourceId = queue.shift();
+          visited.add(sourceId);
+          (outgoing[sourceId] || []).forEach(function (targetId) {
+            depths[targetId] = Math.max(depths[targetId], depths[sourceId] + 1);
+            incoming[targetId] -= 1;
+            if (incoming[targetId] === 0) queue.push(targetId);
+          });
+        }
+        var deepest = Math.max.apply(null, Object.keys(depths).map(function (id) { return depths[id]; }).concat([0]));
+        nodes.filter(function (node) { return !visited.has(node.id); }).forEach(function (node) { depths[node.id] = deepest + 1; });
+
+        var columns = {};
+        nodes.forEach(function (node) {
+          var column = depths[node.id];
+          if (!columns[column]) columns[column] = [];
+          columns[column].push(node);
+        });
+        Object.keys(columns).forEach(function (column) {
+          columns[column].sort(function (a, b) { return a.y - b.y || String(a.title).localeCompare(String(b.title)); });
+        });
+
+        var columnNumbers = Object.keys(columns).map(Number).sort(function (a, b) { return a - b; });
+        var maxColumnHeight = Math.max.apply(null, columnNumbers.map(function (column) {
+          return columns[column].reduce(function (total, node) {
+            return total + (node.type === 'start' || node.type === 'end' ? terminalHeight : normalHeight);
+          }, 0) + Math.max(0, columns[column].length - 1) * rowGap;
+        }).concat([normalHeight]));
+        var canvasWidth = Math.max(treeGrid.clientWidth - 2, 96 + (Math.max.apply(null, columnNumbers) + 1) * cardWidth + Math.max.apply(null, columnNumbers) * columnGap);
+        var canvasHeight = Math.max(treeGrid.clientHeight - 2, maxColumnHeight + 96);
+        var canvas = element('div', 'tree-canvas');
+        canvas.style.width = canvasWidth + 'px';
+        canvas.style.height = canvasHeight + 'px';
+        canvas.dataset.width = String(canvasWidth);
+        canvas.dataset.height = String(canvasHeight);
+        var positions = {};
+
+        columnNumbers.forEach(function (column) {
+          var columnHeight = columns[column].reduce(function (total, node) {
+            return total + (node.type === 'start' || node.type === 'end' ? terminalHeight : normalHeight);
+          }, 0) + Math.max(0, columns[column].length - 1) * rowGap;
+          var y = (canvasHeight - columnHeight) / 2;
+          columns[column].forEach(function (node) {
+            var height = node.type === 'start' || node.type === 'end' ? terminalHeight : normalHeight;
+            positions[node.id] = { x: 48 + column * (cardWidth + columnGap), y: y, height: height };
+            y += height + rowGap;
+          });
+        });
+
+        var svgNamespace = 'http://www.w3.org/2000/svg';
+        var lines = document.createElementNS(svgNamespace, 'svg');
+        lines.setAttribute('class', 'tree-lines');
+        lines.setAttribute('width', String(canvasWidth));
+        lines.setAttribute('height', String(canvasHeight));
+        var definitions = document.createElementNS(svgNamespace, 'defs');
+        var marker = document.createElementNS(svgNamespace, 'marker');
+        marker.setAttribute('id', 'tree-arrow');
+        marker.setAttribute('viewBox', '0 0 10 8');
+        marker.setAttribute('refX', '9');
+        marker.setAttribute('refY', '4');
+        marker.setAttribute('markerWidth', '8');
+        marker.setAttribute('markerHeight', '8');
+        marker.setAttribute('orient', 'auto');
+        var arrow = document.createElementNS(svgNamespace, 'path');
+        arrow.setAttribute('d', 'M 0 0 L 10 4 L 0 8 z');
+        arrow.setAttribute('fill', '#7182a6');
+        marker.appendChild(arrow);
+        definitions.appendChild(marker);
+        lines.appendChild(definitions);
+        edges.forEach(function (edge) {
+          var source = positions[edge.source];
+          var target = positions[edge.target];
+          if (!source || !target) return;
+          var sourceX = source.x + cardWidth;
+          var sourceY = source.y + source.height / 2;
+          var targetX = target.x;
+          var targetY = target.y + target.height / 2;
+          var bendX = (sourceX + targetX) / 2;
+          var path = document.createElementNS(svgNamespace, 'path');
+          path.setAttribute('d', 'M ' + sourceX + ' ' + sourceY + ' C ' + bendX + ' ' + sourceY + ', ' + bendX + ' ' + targetY + ', ' + targetX + ' ' + targetY);
+          path.setAttribute('marker-end', 'url(#tree-arrow)');
+          if (unlockedEdges.indexOf(edge.id) !== -1) path.classList.add('is-known');
+          if (runEdgeSet.has(edge.id)) path.classList.add('in-run');
+          lines.appendChild(path);
+        });
+        canvas.appendChild(lines);
+
+        nodes.forEach(function (node, index) {
+          var isUnlocked = node.type === 'start' || unlocked.indexOf(node.id) !== -1;
+          var inRun = history.indexOf(node.id) !== -1;
+          var isCurrent = node.id === currentId;
+          var canRewind = node.type === 'start' || inRun;
+          var terminalClass = node.type === 'start' ? ' start-node' : node.type === 'end' ? ' end-node' : '';
+          var stateClasses = (inRun ? ' in-run' : '') + (isCurrent ? ' is-current' : '');
+          var card = element('button', 'plot-card ' + (isUnlocked ? 'unlocked' : 'locked') + terminalClass + stateClasses);
+          card.type = 'button';
+          card.style.left = positions[node.id].x + 'px';
+          card.style.top = positions[node.id].y + 'px';
+          if (!isUnlocked) {
+            var question = element('div', 'question');
+            question.appendChild(element('b', '', '?'));
+            question.appendChild(element('span', '', '尚未解锁'));
+            card.appendChild(question);
+          } else {
+            var cover = coverForNode(node);
+            if (cover && node.type !== 'start' && node.type !== 'end') {
+              var image = element('img', 'plot-cover');
+              image.src = cover;
+              image.alt = '';
+              card.appendChild(image);
+            }
+            card.appendChild(element('div', 'plot-shade'));
+            card.appendChild(element('span', 'plot-index', String(index + 1).padStart(2, '0')));
+            var copy = element('div', 'plot-copy');
+            copy.appendChild(element('small', '', node.type === 'start' ? '故事起点' : node.type === 'choice' ? '关键抉择' : node.type === 'end' ? '故事结局' : '影视节点'));
+            copy.appendChild(element('strong', '', node.title || '未命名剧情'));
+            card.appendChild(copy);
+            if (canRewind) {
+              var rewindMark = element('span', 'rewind-mark', '↶');
+              rewindMark.setAttribute('aria-hidden', 'true');
+              card.appendChild(rewindMark);
+            }
+          }
+          card.setAttribute('aria-label', !isUnlocked
+            ? '未知命运'
+            : canRewind
+              ? '聚焦「' + (node.title || '未命名剧情') + '」，再次点击回溯剧情与变量'
+              : '聚焦已解锁命运「' + (node.title || '未命名剧情') + '」');
+          card.addEventListener('click', function () {
+            focusTreeNode(node, card, positions[node.id], canRewind);
+          });
+          canvas.appendChild(card);
+        });
+        treeStage.appendChild(canvas);
+        treeCanvas = canvas;
+        window.requestAnimationFrame(fitTree);
+      }
+
+      treeGrid.addEventListener('pointerdown', function (event) {
+        if (event.button !== 0 || event.target.closest('.tree-controls')) return;
+        treePointer = {
+          id: event.pointerId,
+          startX: event.clientX,
+          startY: event.clientY,
+          originX: treeX,
+          originY: treeY
+        };
+        treePanMoved = false;
+        treeGrid.classList.add('is-panning');
+      });
+      treeGrid.addEventListener('pointermove', function (event) {
+        if (!treePointer || treePointer.id !== event.pointerId) return;
+        var deltaX = event.clientX - treePointer.startX;
+        var deltaY = event.clientY - treePointer.startY;
+        if (Math.abs(deltaX) + Math.abs(deltaY) > 4 && !treePanMoved) {
+          treePanMoved = true;
+          treeGrid.setPointerCapture(event.pointerId);
+        }
+        treeX = treePointer.originX + deltaX;
+        treeY = treePointer.originY + deltaY;
+        applyTreeTransform();
+      });
+      function finishTreePan(event) {
+        if (!treePointer || treePointer.id !== event.pointerId) return;
+        treePointer = null;
+        treeGrid.classList.remove('is-panning');
+        window.setTimeout(function () { treePanMoved = false; }, 0);
+      }
+      treeGrid.addEventListener('pointerup', finishTreePan);
+      treeGrid.addEventListener('pointercancel', finishTreePan);
+      treeGrid.addEventListener('wheel', function (event) {
+        if (!treeCanvas) return;
+        event.preventDefault();
+        var bounds = treeGrid.getBoundingClientRect();
+        var factor = event.deltaY < 0 ? 1.12 : 0.89;
+        setTreeScale(treeScale * factor, event.clientX - bounds.left, event.clientY - bounds.top);
+      }, { passive: false });
+      document.getElementById('tree-zoom-out').addEventListener('click', function () {
+        setTreeScale(treeScale / 1.2, treeGrid.clientWidth / 2, treeGrid.clientHeight / 2);
+      });
+      document.getElementById('tree-zoom-in').addEventListener('click', function () {
+        setTreeScale(treeScale * 1.2, treeGrid.clientWidth / 2, treeGrid.clientHeight / 2);
+      });
+      document.getElementById('tree-fit').addEventListener('click', fitTree);
+
+      document.getElementById('start-button').addEventListener('click', startNewGame);
+      document.getElementById('continue-button').addEventListener('click', continueGame);
+      document.getElementById('tree-button').addEventListener('click', function () { openTree('home'); });
+      document.getElementById('game-tree-button').addEventListener('click', function () { persist(); openTree('game'); });
+      document.getElementById('home-button').addEventListener('click', function () { persist(); setView('home'); });
+      document.getElementById('tree-back-button').addEventListener('click', function () { setView(returnView); if (returnView === 'game' && currentId) show(currentId, true); });
+      window.addEventListener('beforeunload', persist);
+      window.addEventListener('resize', function () {
+        if (treeView.classList.contains('active')) fitTree();
+      });
+      window.addEventListener('keydown', function (event) {
+        if (event.code === 'Space' && gameView.classList.contains('active')) {
+          var node = nodes.find(function (item) { return item.id === currentId; });
+          if (node && node.type === 'media') { event.preventDefault(); setPlaying(!playing); }
+        }
+        if (treeView.classList.contains('active') && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].indexOf(event.code) !== -1) {
+          event.preventDefault();
+          var panStep = event.shiftKey ? 160 : 64;
+          if (event.code === 'ArrowLeft') treeX += panStep;
+          if (event.code === 'ArrowRight') treeX -= panStep;
+          if (event.code === 'ArrowUp') treeY += panStep;
+          if (event.code === 'ArrowDown') treeY -= panStep;
+          applyTreeTransform();
+        }
+        if (event.code === 'Escape' && treeView.classList.contains('active')) document.getElementById('tree-back-button').click();
+      });
+
+      updateHomeMenu();
+    })();
+
+  </script>
+</body>
+</html>
