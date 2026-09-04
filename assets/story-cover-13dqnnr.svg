@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">叙世默认项目封面</title>
+  <desc id="description">蓝紫色渐变背景上的故事节点与叙世标志</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="60" x2="1480" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2A62"/>
+      <stop offset="0.52" stop-color="#4F72EF"/>
+      <stop offset="1" stop-color="#8E62E9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1180 220) rotate(135) scale(680 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7C5FF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#A7C5FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#172044" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#background)"/>
+  <rect width="1600" height="900" rx="44" fill="url(#glow)"/>
+  <g opacity="0.16" fill="none" stroke="#FFFFFF">
+    <path d="M0 682C264 558 384 756 634 614C884 472 1060 560 1600 334" stroke-width="2"/>
+    <path d="M0 734C270 602 416 802 666 654C916 506 1092 600 1600 390" stroke-width="1.5"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M428 464L696 314L932 452L1172 300" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="428" cy="464" r="58" fill="#FFFFFF" fill-opacity="0.94"/>
+    <circle cx="696" cy="314" r="45" fill="#BFD0FF"/>
+    <circle cx="932" cy="452" r="45" fill="#FFFFFF" fill-opacity="0.86"/>
+    <circle cx="1172" cy="300" r="58" fill="#FFE7A6"/>
+    <path d="M411 464L423 476L447 448" fill="none" stroke="#4F72EF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1154 275L1192 300L1154 325V275Z" fill="#6256D9"/>
+  </g>
+  <g fill="#FFFFFF">
+    <text x="128" y="704" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="70" font-weight="700" letter-spacing="-2">新的互动故事</text>
+    <text x="132" y="764" font-family="Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28" font-weight="500" opacity="0.72" letter-spacing="5">CREATED WITH STORYOS</text>
+  </g>
+</svg>
